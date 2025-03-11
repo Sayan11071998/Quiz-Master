@@ -4,22 +4,11 @@ using UnityEngine;
 public class Question_SO : ScriptableObject
 {
     [TextArea(2, 6)]
-    [SerializeField] private string question = "Enter new question text here";
-    [SerializeField] private string[] answers = new string[4];
-    [SerializeField] private int correctAnswerIndex;
+    [SerializeField] string question = "Enter new question text here";
+    [SerializeField] string[] answers = new string[4];
+    [SerializeField] int correctAnswerIndex;
 
-    public string GetQuestion()
-    {
-        return question;
-    }
-
-    public string GetAnswer(int index)
-    {
-        return answers[index];
-    }
-
-    public int GetCorrctAnswerIndex()
-    {
-        return correctAnswerIndex;
-    }
+    public string GetQuestion() => question;
+    public string GetAnswer(int index) => answers[index];
+    public int GetCorrectAnswerIndex() => correctAnswerIndex;
 }

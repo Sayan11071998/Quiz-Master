@@ -6,22 +6,15 @@ public class Timer : MonoBehaviour
     [SerializeField] private float timeToShowCorrectAnswer = 10f;
 
     public bool loadNextQuestion;
-    public bool isAnsweringQuestion = false;
     public float fillFraction;
+    public bool isAnsweringQuestion;
 
     private float timerValue;
 
-    private void Update()
-    {
-        UpdateTimer();
-    }
+    void Update() => UpdateTimer();
+    public void CancelTimer() => timerValue = 0;
 
-    public void CancleTimer()
-    {
-        timerValue = 0;
-    }
-
-    private void UpdateTimer()
+    void UpdateTimer()
     {
         timerValue -= Time.deltaTime;
 
